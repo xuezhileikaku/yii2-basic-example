@@ -42,7 +42,7 @@ return [
 
         ],
         'user' => [
-            'identityClass' => 'common\models\DiUser',
+            'identityClass' => 'common\models\User',
             'enableAutoLogin' => true,
             'enableSession' => false,
             'loginUrl' => null,
@@ -69,7 +69,6 @@ return [
             'enablePrettyUrl' => true,
             'enableStrictParsing' => true,
             'showScriptName' => false,
-
             'rules' => $route,
         ],
 

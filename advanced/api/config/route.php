@@ -1,5 +1,16 @@
 <?php
 return [
+//    \api\controllers\UserController::className()
+    [
+        'class' => 'yii\rest\UrlRule',
+        'controller' => 'user',
+        'extraPatterns' => [
+            'POST login' => 'login',
+            'POST register' => 'register',
+        ],
+        'tokens' => ['{id}' => '<id:\\w+>'],
+        'pluralize' => false
+    ],
 //                \api\controllers\WechatController::className()
     [
         'class' => 'yii\rest\UrlRule',
@@ -11,7 +22,6 @@ return [
             'GET search' => 'search',
             'POST setting' => 'setting',
             'POST bind' => 'bind',
-
             'POST charge' => 'charge',
             'POST send' => 'send',
         ],
